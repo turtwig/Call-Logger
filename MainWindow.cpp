@@ -19,11 +19,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), host("192.168.10.
     QStringList headers;
     headers << "Date" << "Time" << "To" << /* "Who" << "From" << */ "Answered By" << /* "Transferred" << */ "Number" << "Duration" << "Call Time";
 
-    hView = new QHeaderView(Qt::Orientation(0x1), table);
+    hView = new QHeaderView(Qt::Horizontal, table);
     hView->setResizeMode(QHeaderView::Stretch);
     table->setHorizontalHeader(hView);
 
-    vView = new QHeaderView(Qt::Orientation(0x2), table);
+    vView = new QHeaderView(Qt::Vertical, table);
     vView->hide();
     table->setVerticalHeader(vView);
 
