@@ -26,7 +26,6 @@ private:
     QHeaderView* vView;
     const QString host;
     const int port;
-    bool showRow;
 };
 
 #endif // MAINWINDOW_H

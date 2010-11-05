@@ -58,7 +58,6 @@ void MainWindow::handshake() {
 void MainWindow::readData() {
     QTextStream s(sock);
     while(!s.atEnd()) {
-        showRow = 1;
         QStringList data = s.readLine().split(",");
         QStringList data2 = data[0].split(" ");
         if (data.length() < 10 || data2.length() < 2) {
@@ -71,11 +70,6 @@ void MainWindow::readData() {
         }
 
         if (data[7] == "")
-        {
-            showRow = 0;
-        }
-
-        if (showRow)
         {
             int r = table->rowCount();
             table->setRowCount(table->rowCount()+1);
