@@ -69,7 +69,7 @@ void MainWindow::readData() {
             continue;
         }
 
-        if (data[7] == "")
+        if (data[7] != "")
         {
             int r = table->rowCount();
             table->setRowCount(table->rowCount()+1);
