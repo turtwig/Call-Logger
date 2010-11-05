@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QAbstractSocket>
+#include <QHeaderView>
 
 class QTableWidget;
 class QTcpSocket;
@@ -21,8 +22,11 @@ private slots:
 private:
     QTableWidget* table;
     QTcpSocket* sock;
+    QHeaderView* hView;
+    QHeaderView* vView;
     const QString host;
     const int port;
+    bool showRow;
 };
 
 #endif // MAINWINDOW_H
